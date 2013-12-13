@@ -16,8 +16,10 @@
 #include "Lab5.h"
 #include "Lab4.h"
 #include "Lab6.h"
+#include "Leap.h"
 #include "Lab7.h"
 #include "Lab8.h"
+#include "GamesAssignment.h"
 #include "Buddha.h"
 
 using namespace BGE;
@@ -25,14 +27,13 @@ using namespace BGE;
 int main(int argc, char *argv[])
 {
 	
-	//Lab5 game;
+	GamesAssignment game;
 
-	// Uncomment this line to run the Rift/Connect/Physics demo as per 
-	// http://www.youtube.com/watch?v=EEbVHxOkTxw
-	Lab8 game;
-
+	
+	
 
 	game.Run();
 
 	return 0;
 }
+

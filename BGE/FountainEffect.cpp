@@ -32,7 +32,7 @@ bool FountainEffect::Initialise()
 
 void FountainEffect::InitParticle(Particle & p)
 {
-	float radius = 0.25f;
+	float radius = 0.30f;
 	p.position = position;
 
 	p.velocity = glm::vec3(RandomClamped(-radius, radius), RandomClamped(), RandomClamped(-radius, radius)) * 10.0f;
@@ -42,13 +42,13 @@ void FountainEffect::InitParticle(Particle & p)
 	p.diffuse.b = diffuse.b * RandomClamped(0, 1);
 	p.age = 0;
 	p.alive = true;
-	p.size = RandomClamped(10, 50);
+	p.size = RandomClamped(30, 50);
 	p.lifetime = 10.0f;
 }
 
 void FountainEffect::UpdateParticle(float timeDelta, Particle & p)
 {
-	static glm::vec3 gravity = glm::vec3(0, -9.8, 0);
+	static glm::vec3 gravity = glm::vec3(0, -7.8, 0);
 	
 	p.velocity += gravity * timeDelta;
 	p.position += p.velocity * timeDelta;
